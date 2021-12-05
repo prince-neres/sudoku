@@ -8,6 +8,7 @@
 * HTML
 * CSS
 * JavaScript
+* JQuery
 
 ## Maneiras de se Jogar
 **1.** Acesse o site <https://sudoku-gray-chi.vercel.app/>  
