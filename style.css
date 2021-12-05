@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+body{
+    background-color: rgb(206, 206, 206);
+}
+
+nav{
+    display: flex;
+    background-color: white;
+    border: solid 2px rgb(0, 0, 0);
+}
+
+h3{
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.sobre{
+    display: none;
+}
+
+.sudoku{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    border: 2px solid rgb(0, 0, 0);
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table td:nth-child(3n):not(:last-child) {
+    border-right: 3px solid rgb(0, 0, 0);
+}
+
+table tr:nth-child(3n):not(:last-child) td {
+    border-bottom: 3px solid rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+  
+input {
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    border: solid 2px rgb(255, 255, 255);
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;  
+}
+
+.botoes{
+    padding-top: 20px;
+}
+
+button{
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    border: solid 2px rgb(0, 0, 0);
+}
+
