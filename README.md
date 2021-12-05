@@ -1,4 +1,4 @@
-<h2 align="center">Sudokur</h2>
+<h2 align="center">Sudoku</h2>
 
 <div align="center">
   <img src="sudoku.png" >
