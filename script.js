@@ -60,7 +60,9 @@ function detectaAlt(element) {
         }
     } else {
         element.css('border-color', 'red')
-        mostraErros()
+        if(val != ""){
+            mostraErros()
+        }
     } 
 }
 
