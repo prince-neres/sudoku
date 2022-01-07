@@ -1,34 +1,34 @@
-let sudoku 
+let sudoku
 let erros = 0
 
 // Botões de dificuldades
-if($('.facil').on('click',()=>{
+if($('.facil').on('click', () => {
     inicia(facil)
 }))
 
-if($('.medio').on('click',()=>{
+if($('.medio').on('click', () => {
     inicia(medio)
 }))
 
-if($('.dificil').on('click',()=>{
+if($('.dificil').on('click', () => {
     inicia(dificil)
 }))
 
-if($('.impossivel').on('click',()=>{
+if($('.impossivel').on('click', () => {
    inicia(impossivel)
 }))
 
 // Inicia com a dificuldade escolhida
-function inicia(dificuldade){
+function inicia(dificuldade) {
     reset()
     erros = 0
-    $('.erros').text(`Erros: ${erros}`)
     sudoku = dificuldade
+    $('.erros').text(`Erros: ${erros}`)
     criaGrade()
 }
 
 // Cria a grade
-function criaGrade(){
+function criaGrade() {
     $(document).ready(
         function () {
             for (let i = 0; i < 9; i++) {
@@ -60,7 +60,7 @@ function detectaAlt(element) {
         }
     } else {
         element.css('border-color', 'red')
-        if(val != ""){
+        if(val != "") {
             mostraErros()
         }
     } 
@@ -99,23 +99,23 @@ function fimDeJogo() {
 }
 
 // Mostrar erros encima da grade
-function mostraErros(){
+function mostraErros() {
     erros++
     $('.erros').text(`Erros: ${erros}`)
 }
 
 //Limpa tela
-function reset(){
+function reset() {
     $('.grade').html('');
 }
 
 // Navegação dentro da página
-$('#sobre').on('click', ()=>{
+$('#sobre').on('click', () => {
     $(".jogo").fadeOut(0);
     $('.sobre').fadeIn()
 })
 
-$('#jogo').on('click', ()=>{
+$('#jogo').on('click', () => {
     $(".jogo").fadeIn();
     $('.sobre').fadeOut(0)
 })
@@ -130,9 +130,10 @@ let facil = [
     ['','','','5','','','','8','7'],
     ['2','4','6','','7','3','','5','8'],
     ['','','','','','','','','3'],
-    ['8','','','2','','','7','','']]
+    ['8','','','2','','','7','','']
+]
 
-let medio = [ 
+let medio = [
     ['','','','','','','','',''],
     ['8','','','','2','','','','5'],
     ['','','','','','6','2','4',''],
@@ -141,9 +142,10 @@ let medio = [
     ['','','7','4','','','5','2',''],
     ['','7','2','5','','','','',''],
     ['6','','','','8','','','','1'],
-    ['','','','','','','','','']]
+    ['','','','','','','','','']
+]
 
-let dificil = [ 
+let dificil = [
     ['','9','','','1','','','',''],
     ['','','','','2','','','','6'],
     ['','','1','9','','','8','2','4'],
@@ -152,9 +154,10 @@ let dificil = [
     ['4','6','','','','','9','',''],
     ['9','4','3','','','5','2','',''],
     ['2','','','','9','','','',''],
-    ['','','','','4','','','3','']]
+    ['','','','','4','','','3','']
+]
 
-let impossivel = [ 
+let impossivel = [
     ['','','','7','','','','',''],
     ['1','','','','','','','',''],
     ['','','','4','3','','2','',''],
@@ -163,4 +166,5 @@ let impossivel = [
     ['','','','','','','4','1','8'],
     ['','','','','8','1','','',''],
     ['','','2','','','','','5',''],
-    ['','4','','','','','3','','']] 
+    ['','4','','','','','3','','']
+]
